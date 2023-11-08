@@ -7,8 +7,21 @@
             <field name="inherit_id" ref="account.view_partner_property_form"/>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <field name="property_account_position_id" position="after">
+                <field name="property_account_position_id" position="before">
                     <field name="npwp"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_res_partner_bank_inherit" model="ir.ui.view">
+            <field name="name">udemi.partner.bank.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="notebook" position="inner">
+                    <page string="Bank Account">
+                        <field name="bank_ids"/>
+                    </page>
                 </field>
             </field>
         </record>
