@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="account.view_partner_property_form"/>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='show_credit_limit']" position="after">
+                <xpath expr="//field[@name='property_account_position_id']" position="after">
                     <field name="npwp"/>
                 </xpath>
             </field>
